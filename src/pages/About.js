@@ -1,4 +1,4 @@
-import { Route, useNavigate } from "react-router-dom";
+import { Route, Routes, useNavigate } from "react-router-dom";
 
 // nested routes
 import Offers from "./Offers";
@@ -30,9 +30,10 @@ export default function About() {
 
       <button onClick={() => navigate("/products")}>See our products</button>
 
-      {/* <Route path="/about/offers">
-        <Offers />
-      </Route> */}
+      <Routes>
+        <Route path="/about/offers" element={<Offers />} />
+      </Routes>
+      
     </div>
   );
 }
